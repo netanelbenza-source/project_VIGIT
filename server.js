@@ -1,5 +1,5 @@
 import http from "http";
-import routrs from "./routrs.js";
+import routers from "./routers.js";
 
 const server = http.createServer();
 
@@ -13,7 +13,7 @@ server.on("request", (req, res) => {
   let foundHendler = null;
   req.params = {};
 
-  const rotFromMetod = routrs[metode];
+  const rotFromMetod = routers[metode];
   const allroters = Object.keys(rotFromMetod);
 
   for (const router of allroters) {
